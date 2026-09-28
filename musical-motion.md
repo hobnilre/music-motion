@@ -289,7 +289,7 @@ The average divides every component by the number $N=|\widetilde A|\,|\widetilde
 
 A power aggregation with exponent $r>0$ combines each directional bin as
 \begin{equation}
-F_r=\left(\sum_{\ell_u<\ell_v}w_{uv}^{,r}\right)^{1/r},
+F_r=\left(\sum_{\ell_u<\ell_v}w_{uv}^{r}\right)^{1/r},
 \label{eq:power-merge}
 \end{equation}
 and analogously for $B_r,S_r$. It has no divisor by the number of contributions. Its exponent is distinct from the kernel exponent $q$. At $r=1$ it reduces to the sum. Other exponents change the relative influence of weak and strong coincidences.
@@ -320,6 +320,14 @@ Each edge has the same triple $(0,0,84)$, so the sum of raw directions is $12\cd
 
 The relation can therefore describe consistently directed local transitions without supplying a global ranking of chords. A generative use also needs decisions about allowable transitions, repetition, phrase context, rhythm and ending conditions. Those decisions are additional musical structure, not determined by the triple.
 
+# Relation to spectral distance and implied pitches
+
+[Milne and Holland (2016)][milne-holland] model perceived triadic distance using weighted, smoothed harmonic pitch-class representations and their cosine distance, comparing it with Tonnetz and voice-leading distances. They explicitly discuss the relationship between this symmetric distance and musical asymmetry. Here, the pair weights are also symmetric, but comparing their component labels retains an ordered relation: reversal preserves $T$ and $S$, exchanges $B$ with $F$, and negates $D$. The role matrix in \eqref{eq:role-matrix} further records which components supplied the coincidence. This identifies the information carried by the present decomposition beyond its total overlap.
+
+[Parncutt (2024)][parncutt] proposes a directional account in which subsidiary virtual pitches implied by one chord become sounded notes in the next. His C-major-to-F-major example involves F and A implied within the first chord and realized in the second. This is a direct conceptual comparison for \eqref{eq:cf-result}. The mechanisms assign direction differently: his account uses implied-pitch realization, while the present rule compares the labels of weighted component pairs. Computing the triple requires a declared profile and label order, without a separate inference of missing fundamentals. A common example supplies a point of comparison; it does not establish equivalence between the models or perceptual support for the label rule.
+
+The contribution here is the explicit three-component decomposition, its exact constructions and its structural laws. Spectral distance and virtual-pitch implication provide comparison models for investigating its musical interpretation. Such comparisons must specify each model's inputs and distinguish judged similarity, expected continuation and heard direction; evidence for one response does not automatically establish the others.
+
 # Questions made precise by the construction
 
 **Which component roles carry a useful musical direction?** The model lets one vary the amplitudes while preserving offsets and labels, or vary labels while preserving coincident pitches. Those changes separate the influence of spectral weighting from that of role order. In the elementary model, changing the products $a_0a_1$, $a_0a_2$ and $a_1a_2$ changes the magnitudes attached to its six directed transitions. With multiple coincidences in chords it can also change their balance. A musical interpretation should specify which of these variations it expects to preserve.
@@ -346,6 +354,8 @@ For a profile obtained by scaling a sampled template, its reference amplitude mu
 
 The public note-list interfaces use integer pitches, and their pitch caches require nonnegative note indices. The mathematical formulas can be defined on a larger pitch domain; that extension is not an assertion that every legacy interface accepts it. Likewise, finite-precision implementations can change a comparison close to a cutoff, and large integer amplitude products in the simpler discrete implementation can overflow before conversion to real arithmetic. The worked integer weights are within its ordinary arithmetic range. Exact equalities and theorems in the article refer to the declared mathematical construction.
 
+\Needspace{5\baselineskip}
+
 In the positional-label family, a component's place in the generated partial list supplies its label. In the explicitly labelled family, labels travel with the components. The two agree only when these orders and the component data agree. Common transposition, sorting invariance and raw-scale comparisons must therefore be assessed with the actual profile and label convention specified.
 
 Finally, all-pair coincidence counts allow the same component to contribute to several pairs. A capacity-limited matching of two spectra is a different construction. Voice-paired melodic displacement is another. The present descriptor is completely determined by the ordered, weighted component comparisons in \eqref{eq:triple}.
@@ -354,6 +364,10 @@ Finally, all-pair coincidence counts allow the same component to contribute to s
 
 1. Sethares, W. A. (1993). Local consonance and the relationship between timbre and scale. *Journal of the Acoustical Society of America*, **94**(3), 1218–1228. [University of Wisconsin repository][sethares].
 2. Harrison, P. M. C., and Pearce, M. T. (2020). Simultaneous consonance in music perception and composition. *Psychological Review*, **127**(2), 216–244. [doi:10.1037/rev0000169][harrison].
+3. Milne, A. J., and Holland, S. (2016). Empirically testing Tonnetz, voice-leading, and spectral models of perceived triadic distance. *Journal of Mathematics and Music*, **10**(1), 59–85. [doi:10.1080/17459737.2016.1152517][milne-holland].
+4. Parncutt, R. (2024). The origin of the dominant: Schoenberg's ‘strong progression’ and the realisation of implied virtual pitches. *Music Analysis*, **43**(2), 247–301. [doi:10.1111/musa.12233][parncutt].
 
 [sethares]: https://minds.wisconsin.edu/handle/1793/9496
 [harrison]: https://doi.org/10.1037/rev0000169
+[milne-holland]: https://doi.org/10.1080/17459737.2016.1152517
+[parncutt]: https://doi.org/10.1111/musa.12233
