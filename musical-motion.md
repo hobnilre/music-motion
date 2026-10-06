@@ -140,6 +140,8 @@ At $T=0$, the nonnegative additive triple is $(0,0,0)$. Retaining that zero trip
 
 When $T>0$, choosing a pair with probability $w_{uv}/T$ gives another exact interpretation: $\widehat D$ is the expected value of $\operatorname{sgn}(\ell_v-\ell_u)$. This interpretation belongs to the additive nonnegative construction; it follows from its definition and is not a probability of a listener reporting motion.
 
+In the nonnegative construction, the normalized direction describes the balance of the supported component comparisons. Keeping their total support distinguishes an empty comparison from a balance that cancels to zero.
+
 # Structural properties
 
 \begin{theorem}[Reversal]
@@ -161,6 +163,10 @@ The conclusion requires profiles that actually translate. Register-dependent tim
 For the sum rule, multiplying all first-chord amplitudes by $\alpha\geq0$ and all second-chord amplitudes by $\beta\geq0$ multiplies the triple and $D$ by $\alpha\beta$. Normalized components remain unchanged when $\alpha\beta>0$ and $T>0$. Repeating the whole first chord $r$ times and the second $s$ times has the same effect with factor $rs$. Repeating selected notes changes the balance of contributions and may change normalized direction.
 
 Permuting note occurrences or explicitly labelled components leaves the sums unchanged. Applying one strictly increasing relabelling to the common label scale also leaves all comparisons unchanged. Reassigning labels by a new list order, or independently relabelling the two sides on incompatible scales, need not preserve them.
+
+An unchanged chord can contain equal and opposite contributions even though its net direction is zero. The separate components retain that information when a single score cannot.
+
+\clearpage
 
 # A complete three-component construction
 
@@ -268,6 +274,8 @@ The table uses amplitudes $(12,7,9)$ directly, as in the simpler discrete constr
 
 For C major to F major this gives raw components $(7/16,137/72,5/2)$, total $697/144$ and direction $33/16$. Normalization still gives $297/697$. This scale change is independent of whether the final triple is normalized. A reproducible comparison must specify both profile scaling and output normalization.
 
+The chord example shows which shared component roles produced the signed result. Reading that sign as heard tension, a preferred continuation or perceived motion still requires separate evidence.
+
 # How harmonic roles produce direction
 
 For actual harmonic partials, an exact register-sensitive coincidence satisfies $n f_A=m f_B$. Consequently,
@@ -307,6 +315,8 @@ Direction itself is a lossy summary. Given $T>0$, write $m=\widehat F+\widehat B
 \end{equation}
 Thus $\widehat D$ alone leaves a whole interval of triples. Even the full triple hides the detailed role matrix. Applications that need to distinguish opposed harmonic relationships should retain more than the net score.
 
+How the contributions are combined can change both their relative weight and their net direction. The score therefore belongs to a fully specified comparison rule, not to the chord names alone.
+
 # Chord progressions and directed cycles
 
 Assign each allowed chord a vertex and each ordered comparison a directed edge labelled by its triple. A progression then selects a sequence of those edges. The construction permits a direction-based selection criterion once the profile, kernel, aggregation and scale are fixed; whether such a criterion produces useful music is an application question.
@@ -319,6 +329,8 @@ Even the elementary model admits a cycle with positive direction on every edge. 
 Each edge has the same triple $(0,0,84)$, so the sum of raw directions is $12\cdot84=1008$. If direction were the difference $V(B)-V(A)$ of a scalar value attached to each pitch class, its sum around a closed cycle would telescope to zero. Equation \eqref{eq:cycle} proves that no such scalar potential represents this relation on all pitch classes.
 
 The relation can therefore describe consistently directed local transitions without supplying a global ranking of chords. A generative use also needs decisions about allowable transitions, repetition, phrase context, rhythm and ending conditions. Those decisions are additional musical structure, not determined by the triple.
+
+Consistently directed local steps can form a closed cycle. The construction gives a relation between transitions without assigning every chord a place on one global ladder.
 
 # Relation to spectral distance and implied pitches
 
